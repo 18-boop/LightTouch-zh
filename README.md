@@ -21,6 +21,8 @@ Android 与 Windows 分为两个 Release：
 | `source/lighttouch-v0.0.12-desktop-zh-source.tar.gz` | Windows 版完整改动源码（Rust 工程，含中文字体与代理修复） | 仓库内 |
 | `SHA256SUMS.txt` | 全部产物的 SHA-256 | 仓库内 |
 
+每个 Release 的说明分别对应 [`docs/release-android.md`](docs/release-android.md) 与 [`docs/release-windows.md`](docs/release-windows.md)。
+
 ## 界面预览
 
 Windows 桌面版（Android 版界面结构相同）：
@@ -61,11 +63,18 @@ Windows 桌面版（Android 版界面结构相同）：
 - **问题修复**：原版 `ureq` 客户端未配置代理，代理环境下访问旧版商店必然 `timeout: connect`。现改为三级解析（环境变量 → Windows 系统代理 → 本机常见代理端口自动探测），并遵守 `NO_PROXY`/`ProxyOverride`；商店报错文案附带排查指引。
 - 保留英文：日志、CLI 输出、协议字段、Apple 专有名词（IPSW/IPA/boot ROM）、硬件规格。
 
-## 已知限制
+## 验证情况
 
-- Android 版未在真机上跑过完整流程（汉化后仅做静态校验：dex 解析、manifest 一致、原生库逐字节一致、v3 签名通过）。
-- Windows 版已验证启动、退出与 8 个界面截图；未验证实际启动模拟设备、商店联网列表（需下载约 300 MB 固件）。
-- 汉化只改文案，未改任何模拟逻辑；如遇功能问题请先对照原版复现。
+2026 年 10 月实测，两端日常使用未发现明显异常：
+
+| 项目 | Android | Windows |
+| --- | --- | --- |
+| 安装 / 启动 | 真机安装、启动正常 | 解压运行、启动与退出正常 |
+| 固件与商店下载 | 正常下载，应用可安装 | 正常（代理开启、系统代理关闭的环境下也可用） |
+| 应用 / 游戏运行 | 正常启动与运行 | 正常启动与运行 |
+| 中文显示 | 无缺字、无乱码 | 无方块字、无截断 |
+
+汉化只改文案（Windows 另加代理探测），未触碰模拟引擎；如遇与模拟相关的问题，请先对照原版复现，确认是否为上游已有问题。
 
 ## 源码与许可
 

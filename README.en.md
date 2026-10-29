@@ -21,6 +21,8 @@ Android and Windows are published as two separate releases:
 | `source/lighttouch-v0.0.12-desktop-zh-source.tar.gz` | Full buildable Rust workspace for the Windows build (font + proxy fix included) | In repo |
 | `SHA256SUMS.txt` | SHA-256 of every artifact | In repo |
 
+Each release body is mirrored in [`docs/release-android.md`](docs/release-android.md) and [`docs/release-windows.md`](docs/release-windows.md).
+
 ## Screenshots
 
 Windows desktop build (the Android app uses the same layout):
@@ -54,11 +56,18 @@ Windows desktop build (the Android app uses the same layout):
 
 Kept in English on purpose: logs, CLI output, protocol fields, Apple terms (IPSW/IPA/boot ROM), hardware specs.
 
-## Known limits
+## Status
 
-- Android build has not been through a full real-device run (static checks only: dex parse, identical manifest, byte-identical native libs, v3 signature).
-- Windows build was verified for startup, shutdown and 8 UI screenshots; booting an actual emulated device and the online store listing (needs a ~300 MB firmware download) were not exercised.
-- Only the UI text changed; no emulation logic was touched.
+Tested in October 2026 — no obvious issues in day-to-day use on either platform:
+
+| | Android | Windows |
+| --- | --- | --- |
+| Install / launch | Installs and launches on a physical device | Unzips, launches and quits cleanly |
+| Firmware & store downloads | Works; apps install fine | Works — even with a proxy running and the Windows system proxy off |
+| Running apps & games | Works | Works |
+| Chinese text | No missing glyphs, no mojibake | No tofu boxes, no truncation |
+
+Only UI text was changed (plus the proxy probe on Windows); the emulation engine is untouched. If you hit an emulation bug, please check whether upstream reproduces it first.
 
 ## Source and license
 
