@@ -11,13 +11,15 @@ This repository ships the localization and the builds only. It does **not** incl
 
 ## Downloads
 
-| File | Notes |
-| --- | --- |
-| `LightTouch-0.0.11-android-arm64-zh.apk` | Android 10+, ARM64, Chinese UI |
-| `LightTouch-0.0.12-windows-x86_64-zh.zip` | Windows 10/11 x64, Chinese UI + proxy fix, portable (unzip and run) |
-| `source/lighttouch-android-0.0.11-zh-patch.tar.gz` | Android changes: 179 modified smali files, translation table, patch/verify scripts |
-| `source/lighttouch-v0.0.12-desktop-zh-source.tar.gz` | Full buildable Rust workspace for the Windows build (font + proxy fix included) |
-| `SHA256SUMS.txt` | SHA-256 of every artifact |
+Android and Windows are published as two separate releases:
+
+| File | Notes | Download |
+| --- | --- | --- |
+| `LightTouch-0.0.11-android-arm64-zh.apk` | Android 10+, ARM64, Chinese UI | [android-v0.0.11-zh](https://github.com/18-boop/LightTouch-zh/releases/tag/android-v0.0.11-zh) |
+| `LightTouch-0.0.12-windows-x86_64-zh.zip` | Windows 10/11 x64, Chinese UI + proxy fix, portable | [windows-v0.0.12-zh](https://github.com/18-boop/LightTouch-zh/releases/tag/windows-v0.0.12-zh) |
+| `source/lighttouch-android-0.0.11-zh-patch.tar.gz` | Android changes: 179 modified smali files, translation table, patch/verify scripts | In repo |
+| `source/lighttouch-v0.0.12-desktop-zh-source.tar.gz` | Full buildable Rust workspace for the Windows build (font + proxy fix included) | In repo |
+| `SHA256SUMS.txt` | SHA-256 of every artifact | In repo |
 
 ## Screenshots
 

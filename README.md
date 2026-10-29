@@ -9,15 +9,17 @@
 
 本仓库/发布页只提供**汉化改动与编译产物**，不包含 Apple 固件（IPSW），首次使用请按应用内引导自行下载。
 
-## 下载内容
+## 下载
 
-| 文件 | 说明 |
-| --- | --- |
-| `LightTouch-0.0.11-android-arm64-zh.apk` | Android 10+ / ARM64，简体中文 |
-| `LightTouch-0.0.12-windows-x86_64-zh.zip` | Windows 10/11 64 位，简体中文 + 代理修复，解压即用 |
-| `source/lighttouch-android-0.0.11-zh-patch.tar.gz` | Android 汉化改动：179 个改动的 smali + 译文表 + 回填/校验脚本 |
-| `source/lighttouch-v0.0.12-desktop-zh-source.tar.gz` | Windows 版完整改动源码（Rust 工程，含中文字体与代理修复） |
-| `SHA256SUMS.txt` | 全部文件的 SHA-256 |
+Android 与 Windows 分为两个 Release：
+
+| 文件 | 说明 | 下载 |
+| --- | --- | --- |
+| `LightTouch-0.0.11-android-arm64-zh.apk` | Android 10+ / ARM64，简体中文 | [android-v0.0.11-zh](https://github.com/18-boop/LightTouch-zh/releases/tag/android-v0.0.11-zh) |
+| `LightTouch-0.0.12-windows-x86_64-zh.zip` | Windows 10/11 64 位，简体中文 + 代理修复，解压即用 | [windows-v0.0.12-zh](https://github.com/18-boop/LightTouch-zh/releases/tag/windows-v0.0.12-zh) |
+| `source/lighttouch-android-0.0.11-zh-patch.tar.gz` | Android 汉化改动：179 个改动的 smali + 译文表 + 回填/校验脚本 | 仓库内 |
+| `source/lighttouch-v0.0.12-desktop-zh-source.tar.gz` | Windows 版完整改动源码（Rust 工程，含中文字体与代理修复） | 仓库内 |
+| `SHA256SUMS.txt` | 全部产物的 SHA-256 | 仓库内 |
 
 ## 界面预览
 
