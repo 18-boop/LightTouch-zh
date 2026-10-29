@@ -1,5 +1,7 @@
 # LightTouch / Un1box 简体中文版
 
+[简体中文](README.md) · [English](README.en.md)
+
 基于 [blake-lucas/LightTouch](https://github.com/blake-lucas/LightTouch) 的简体中文汉化版，含 Windows 桌面版的一处网络问题修复。原项目是运行经典 iPhone OS / iOS（1–7）应用的模拟器，基于 qemu-ios。
 
 - Android 端：汉化自 **v0.0.11 调试版**（commit `3e0484d`，即 `LightTouch-3e0484d-arm64-debug.apk`）
@@ -16,6 +18,16 @@
 | `source/lighttouch-android-0.0.11-zh-patch.tar.gz` | Android 汉化改动：179 个改动的 smali + 译文表 + 回填/校验脚本 |
 | `source/lighttouch-v0.0.12-desktop-zh-source.tar.gz` | Windows 版完整改动源码（Rust 工程，含中文字体与代理修复） |
 | `SHA256SUMS.txt` | 全部文件的 SHA-256 |
+
+## 界面预览
+
+Windows 桌面版（Android 版界面结构相同）：
+
+| | |
+|---|---|
+| ![首页](docs/screenshots/windows-home.png) | ![设置](docs/screenshots/windows-settings.png) |
+| ![添加设备](docs/screenshots/windows-devices.png) | ![从 IPSW 准备](docs/screenshots/windows-prepare.png) |
+| ![旧版商店](docs/screenshots/windows-store.png) | |
 
 ## Android 安装说明
 
